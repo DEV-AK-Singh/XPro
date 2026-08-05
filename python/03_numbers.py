@@ -68,7 +68,19 @@
 # print(math.cos(0))
 # print(math.tan(math.pi / 4))
 
-import random
-print(random.randint(1, 10)) # 1 to 10
-print(random.randrange(1, 10)) # 1 to 9
-print(random.random()) # 0.0 to 1.0
+# import random
+# print(random.randint(1, 10)) # 1 to 10
+# print(random.randrange(1, 10)) # 1 to 9
+# print(random.random()) # 0.0 to 1.0
+# colors = ["red", "green", "blue"]
+# print(random.choice(colors)) # random color
+# nums = [1, 2, 3, 4, 5]
+# print(random.sample(nums, 3))
+# random.shuffle(nums)
+# print(nums)
+
+# print(bin(10))
+# print(oct(10))
+# print(hex(10))
+
+print(int("10101", 2))
