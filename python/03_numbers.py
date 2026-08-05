@@ -83,4 +83,4 @@
 # print(oct(10))
 # print(hex(10))
 
-print(int("10101", 2))
+# print(int("10101", 2))
