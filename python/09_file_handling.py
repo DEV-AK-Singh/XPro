@@ -85,7 +85,30 @@
 #         if text:
 #             print(text)
 
-with open("file.txt", "r", encoding="utf-8") as file:
-    print(file.tell())
-    file.read(5)
-    print(file.tell())
+# with open("file.txt", "r", encoding="utf-8") as file:
+#     print(file.tell())
+#     file.read(5)
+#     print(file.tell())
+
+# with open("file.txt", "r", encoding="utf-8") as file:
+#     print(file.read(5))
+#     file.seek(0)
+#     print(file.read(5))
+
+with open("image.jpg", "rb") as file:
+    data = file.read()
+
+with open("image_copy.jpg", "wb") as file:
+    file.write(data)
+
+# Text files
+# ↓
+# "r"
+# "w"
+# "a"
+
+# Binary files
+# ↓
+# "rb"
+# "wb"
+# "ab"
