@@ -95,3 +95,97 @@
 #     def sound(self):
 #         print("Meow")
 
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#     def speak(self):
+#         raise NotImplementedError("Subclasses must implement this method.")
+#     @staticmethod
+#     def is_animal(obj):
+#         return isinstance(obj, Animal)
+#     def __str__(self):
+#         return f"Animal: {self.name}"
+#     def __repr__(self):
+#         return f"Animal(name={self.name})"
+#     def __eq__(self, other):
+#         return self.name == other.name
+
+# class Dog(Animal):
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.breed = "Unknown"
+#     def speak(self):
+#         return "Woof!"
+
+# class Cat(Animal):
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.color = "Unknown"
+
+#     @classmethod
+#     def create_colored_cat(cls, name, color):
+#         cat = cls(name)
+#         cat.color = color
+#         return cat
+    
+#     def speak(self):
+#         return "Meow!"
+
+# # dog = Dog("Buddy")
+# # cat = Cat("Whiskers")
+# # print(dog.speak())  # Output: "Woof!"
+# # print(cat.speak())  # Output: "Meow!"
+
+# # dog = Dog("Buddy")
+# # cat = Cat.create_colored_cat("Whiskers", "Gray")
+# # print(dog.speak())  # Output: "Woof!"
+# # print(cat.speak())  # Output: "Meow!"
+# # print(cat.color)
+
+# dog = Dog("Buddy")
+# cat = Cat.create_colored_cat("Buddy", "Gray")
+# print(dog)
+# print(cat)
+# print(repr(dog))
+# print(repr(cat))
+# print(str(dog))
+# print(str(cat))
+# print(dog == cat)
+
+# +   → __add__
+# -   → __sub__
+# *   → __mul__
+# /   → __truediv__
+# ==  → __eq__
+# <   → __lt__
+# >   → __gt__
+# <=  → __le__
+# >=  → __ge__
+
+# class Dataset:
+#     def __init__(self, data):
+#         self.data = data
+#     def __iter__(self):
+#         new_data = [item * 2 for item in self.data]
+#         return iter(new_data)
+# dataset = Dataset([1, 2, 3])
+# for item in dataset:
+#     print(item)
+
+class Engine:
+    def start(self):
+        print("Engine started.")
+    def stop(self):
+        print("Engine stopped.")
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()
+    def start(self):
+        self.engine.start()
+    def stop(self):
+        self.engine.stop()
+
+car = Car()
+car.start()
+car.stop()
