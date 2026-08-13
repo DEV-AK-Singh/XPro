@@ -75,3 +75,41 @@
 # print(ar_diag3)
 # ar_linspace = np.linspace(0, 10, 5)
 # print(ar_linspace)
+
+# # rand, randn, ranf, randint
+# import numpy as np  
+# import math
+# # ar_rand = np.random.rand(5)
+# ar_rand = np.array([math.floor(x * 10) for x in np.random.rand(5)]) 
+# print(ar_rand)
+# ar_randn = np.random.randn(5)
+# print(ar_randn)
+# ar_randf = np.random.ranf(5)
+# print(ar_randf)
+# ar_randint = np.random.randint(1, 10, (5, 5))
+# print(ar_randint)
+
+# import numpy as np
+# x1 = np.array([1,2,3,4])
+# x2 = x1.astype(np.float64)
+# print(x1, x1.dtype)
+# print(x2, x2.dtype)
+
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+arr_1 = arr + 3 // np.add(arr, 3)
+print(arr_1)
+arr_2 = arr - 3 // np.subtract(arr, 3)
+print(arr_2)
+arr_3 = arr * 3 // np.multiply(arr, 3)
+print(arr_3)
+arr_4 = arr / 3 // np.divide(arr, 3)
+print(arr_4)
+arr_5 = arr // 3 // np.floor_divide(arr, 3)
+print(arr_5)
+arr_6 = arr % 3 // np.mod(arr, 3)
+print(arr_6)
+arr_7 = arr ** 3 // np.power(arr, 3)
+print(arr_7)
+arr_8 = 1 / arr // np.reciprocal(arr)
+print(arr_8)
