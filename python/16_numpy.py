@@ -208,8 +208,8 @@
 # arrs = np.array_split(arr1, 3, axis=1)
 # print(arrs)
 
-import numpy as np
-arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12,11,12,31,14,15,11,17,8,9,10,11,12])
+# import numpy as np
+# arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12,11,12,31,14,15,11,17,8,9,10,11,12])
 # arrs = np.where(arr == 11)
 # print(arrs)
 # print(np.unique(arr))
@@ -222,3 +222,53 @@ arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12,11,12,31,14,15,11,17,8,9,10,11,12])
 # print(np.isin([11, 12, 31], arr))
 # filtered_arr = arr[arr % 2 == 0]
 # print(filtered_arr)
+# shuffle_arr = np.random.permutation(arr)
+# print(shuffle_arr)
+# unique_arr = np.unique(arr, return_index=True, return_counts=True)
+# print(unique_arr)
+# resized_arr = np.resize(arr, (3, 6))
+# print(resized_arr)
+# flattened_arr = resized_arr.flatten()
+# print(flattened_arr)
+# ravel_arr = resized_arr.ravel()
+# print(ravel_arr)
+# x = np.insert(arr, (1, 2), 100)
+# print(x)
+# y = np.append(arr, 100)
+# print(y)
+# z = np.delete(arr, 2)
+# print(z)
+
+import numpy as np
+npArr = np.array([[1,2,3], [4,5,6], [7,8,9]])
+npMat = np.matrix([[1,2,3], [4,5,6], [7,8,9]])
+
+# print(npArr)
+# print(npArr.T)
+# print(npArr.transpose())
+
+# print(npMat)
+# print(npMat.T)
+# print(npMat.transpose()) 
+
+# mulNpArr = npArr * npArr
+# print(mulNpArr)
+# mulNpMat = npMat * npMat
+# print(mulNpMat)
+# mulNpMat1 = npMat * npArr
+# print(mulNpMat1)
+# mulNpMat2 = npArr * npMat
+# print(mulNpMat2)
+# mulNpMat3 = npMat * npArr.T
+# print(mulNpMat3)
+
+# print(npArr*npArr)
+# print(npArr.dot(npArr))
+
+# print(npMat)
+# print()
+# print(npMat.transpose())
+# print(npMat.swapaxes(0, 1))
+# print(np.linalg.inv(npMat))
+# print(np.linalg.det(npMat))
+# print(np.linalg.matrix_power(npMat, 3))
