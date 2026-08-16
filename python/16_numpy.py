@@ -142,3 +142,24 @@
 # print(arr_20)
 # arr_21 = np.cumsum(arr_15)
 # print(arr_21)
+
+# Broadcasting in Numpy means that you can perform operations between arrays of different shapes.
+# import numpy as np
+# arr1 = np.array([1,2,3])
+# arr2 = np.array([[1],[2],[3]])
+# print(arr1+arr2)
+
+# Indexing in Numpy means that you can access elements of an array using a single index.
+# import numpy as np
+# arr1 = np.array([1,2,3,4,5])
+# print(arr1.shape)
+# print(arr1.ndim)
+# arr2 = np.array([[1,2,3], [4,5,6]])
+# print(arr2.shape)
+# print(arr2.ndim)
+# arr3 = np.array([[[1,2,3], [4,5,6]], [[1,2,3], [4,5,6]]])
+# print(arr3.shape)
+# print(arr3.ndim)
+# print(arr1[2])
+# print(arr2[1,2])
+# print(arr3[1,:1,:])
