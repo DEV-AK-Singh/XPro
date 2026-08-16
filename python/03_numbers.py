@@ -83,4 +83,6 @@
 # print(oct(10))
 # print(hex(10))
 
-# print(int("10101", 2))
+# print(int("1010", 2))
+# print(int("0o12", 8))
+# print(int("0x0a", 16))

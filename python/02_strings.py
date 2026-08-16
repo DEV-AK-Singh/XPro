@@ -67,7 +67,7 @@
 # print(" machine learning ".split(" "))
 # print(" machine learning ".split("e"))
 # print(" machine learning ".partition("learn"))
-# print(" machine learning ".rpartition("learning"))
+# print(" machine learning ".rpartition("learn"))  
 
 # print(" machine learning ".join(["a", "b", "c"]))
 # print(" machine learning ".replace("learning", "machine"))
@@ -95,10 +95,9 @@
 # name = "Abhishek"
 # print("Hello %s" % name) # no spaces
 # print("Hello %10s" % name) # 10 spaces
-# print("Hello %-10s" % name) # 10 spaces
-# print("Hello %-10s" % name) # 10 spaces
+# print("Hello %-10s World" % name) # 10 spaces with left alignment
 # print("Hello %.5s" % name) # 5 characters
-# print("Hello %10.5s" % name) # 10 characters
+# print("Hello %10.5s World" % name) # 10 characters
 
 name = "Abhishek"
 age = 25
