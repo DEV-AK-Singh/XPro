@@ -163,3 +163,62 @@
 # print(arr1[2])
 # print(arr2[1,2])
 # print(arr3[1,:1,:])
+
+# import numpy as np
+# arr = np.array([[[1,2,3], [4,5,6]], [[1,2,3], [4,5,6]]])
+# for i in arr:
+#     for j in i:
+#         for k in j:
+#             print(k)
+# for i in np.nditer(arr):
+#     print(i)
+# for index, data in np.ndenumerate(arr):
+#     print(index, data)
+
+# import numpy as np
+# arr = np.array([1,2,3,4,5]) 
+# arr_x = arr.copy()
+# arr_x[0] = 10
+# print(arr)
+# print(arr_x)
+# arr_y = arr.view()
+# arr_y[0] = 10
+# print(arr)
+# print(arr_y) 
+
+# import numpy as np
+# arr1 = np.array([1,2,3])
+# arr2 = np.array([4,5,6])
+# # arr3 = np.concatenate((arr1, arr2))
+# # arr3 = np.stack((arr1, arr2), axis=0)
+# # arr3 = np.stack((arr1, arr2), axis=1)
+# # arr3 = np.vstack((arr1, arr2))
+# arr3 = np.hstack((arr1, arr2))
+# print(arr3)
+# arr4 = np.array([[1,2,3], [4,5,6]])
+# arr5 = np.array([[7,8,9], [10,11,12]])
+# arr6 = np.concatenate((arr4, arr5), axis=1) # axis=0 - rows(vertical), axis=1 - columns(horizontal)
+# print(arr6)
+
+# import numpy as np
+# arr1 = [1,2,3,4,5,6,7,1,2,3]
+# arrs = np.array_split(arr1, 3)
+# print(arrs)
+# arr1 = [[1,2,3],[2,3,4],[3,4,5]]
+# arrs = np.array_split(arr1, 3, axis=1)
+# print(arrs)
+
+import numpy as np
+arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12,11,12,31,14,15,11,17,8,9,10,11,12])
+# arrs = np.where(arr == 11)
+# print(arrs)
+# print(np.unique(arr))
+# print(np.sort(arr))
+# print(np.searchsorted(arr, 11))
+# print(np.in1d(arr, [11, 12, 31]))
+# print(np.intersect1d(arr, [11, 12, 31]))
+# print(np.setdiff1d(arr, [11, 12, 31]))
+# print(np.setxor1d(arr, [11, 12, 31]))
+# print(np.isin([11, 12, 31], arr))
+# filtered_arr = arr[arr % 2 == 0]
+# print(filtered_arr)
