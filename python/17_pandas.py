@@ -149,4 +149,23 @@ import pandas as pd
 # print(df.groupby("Subjects").agg(["mean", "sum", "count"]))
 # print(df.groupby("Subjects").agg({"Scores": ["mean", "sum", "count"]}))
 
-## JOIN & APPEND
+## JOIN
+# df1 = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6], "C": [7, 8, 9]})
+# df2 = pd.DataFrame({"D": [10, 11], "E": [13, 14], "F": [16, 17]})
+# print(df1)
+# print(df2)
+# print(df1.join(df2)) # join columns
+# print(df1.join(df2, how="inner", lsuffix="_left", rsuffix="_right"))
+# print(df1.join(df2, how="outer", lsuffix="_left", rsuffix="_right"))
+# print(df1.join(df2, how="left", lsuffix="_left", rsuffix="_right"))
+# print(df1.join(df2, how="right", lsuffix="_left", rsuffix="_right"))
+
+## PIVOT & MELT FUNCTION
+df = pd.DataFrame({"A": ["A1", "A2", "A3", "A4", "A5"], "B": ["B1", "B2", "B3", "B4", "B5"], "C": [1, 2, 3, 4, 5], "D": [10, 20, 30, 40, 50]})
+# print(df)
+# print(pd.melt(df))
+# print(pd.melt(df, id_vars=["A"], value_vars=["B", "C"]))
+# print(pd.melt(df, id_vars=["A", "B"], value_vars=["C"]))
+# print(pd.melt(df, id_vars=["A", "B"], value_vars=["C"], var_name="Column", value_name="Value")) 
+# print(pd.pivot(df, index="A", columns="B", values=["C", "D"]))
+print(pd.pivot_table(df, index="A", columns="B", values=["C"], aggfunc=["sum", "mean"], margins=True, margins_name="Total"))
