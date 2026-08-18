@@ -65,3 +65,53 @@ import pandas as pd
 # df = pd.read_csv("data.csv", nrows=5, header=None)
 # df = pd.read_csv("data.csv", dtype={"Date": str, "Pulse": float, "Duration": float})
 # print(df)
+
+## PANDAS FUNCTIONS
+# df = pd.read_csv("data.csv")
+# print(df)  
+# print(df.head(10)) # first 10 rows
+# print(df.tail(10)) # last 10 rows
+# print(df.describe())  # summary
+# print(df.info())  # information
+# print(df.isnull())  # true or false
+# print(df.isnull().sum()) # missing values
+# print(df["Date"].value_counts()) # frequency
+# print(df["Date"].unique()) # unique values
+# print(df["Date"].nunique()) # number of unique values
+# print(df["Date"].value_counts(dropna=False)) # frequency with missing values
+# print(df["Date"].value_counts(dropna=False, normalize=True)) # frequency with missing values in percentage
+# print(df.sort_index(ascending=False, axis=1)) # sort columns by index (ascending, descending)
+# print(df.sort_values("Date", ascending=False)) # sort rows by column (ascending, descending)
+# print(df.sort_values(["Date", "Pulse"], ascending=[False, True])) # sort rows by multiple columns first by Date in descending order and then by Pulse in ascending order
+# df.loc[df["Pulse"] < 100, ["Date", "Pulse"]] = [None, None] # replace values less than 100 with None in Date and Pulse columns
+# df.iloc[df["Pulse"] < 100, 1:3] = [None, None] # replace values less than 100 with None in Date and Pulse columns
+# difference between loc and iloc is that loc is used to select rows and columns by label, while iloc is used to select rows and columns by integer location
+# print(df)
+
+## HANDLING MISSING DATA (DROPNA, FILLNA)
+# df = pd.read_csv("data.csv")
+# print(df)
+# print(df.dropna()) # drop rows with missing values
+# print(df.dropna(axis=1)) # drop columns with missing values
+# print(df.dropna(how="all")) # drop rows with all missing values
+# print(df.dropna(how="any")) # drop rows with any missing values
+# print(df.dropna(subset=["Date"])) # drop rows with missing values in Date column
+# print(df.dropna(subset=["Date", "Pulse"])) # drop rows with missing values in Date and Pulse columns
+# print(df.fillna(0)) # fill missing values with 0
+# print(df.fillna(df.mean(numeric_only=True)))
+# print(df["Pulse"].fillna(df["Pulse"].mean()))
+# print(df.ffill()) # fill missing values with previous value
+# print(df.bfill()) # fill missing values with next value
+
+## HANDLING MISSING DATA (REPLACE, INTERPOLATE)
+df = pd.read_csv("data.csv")
+# print(df) 
+# print(df.replace(100, 1)) # replace 0 with 1
+# print(df.replace("[A-Za-z0-9]", "1", regex=True))
+# print(df.replace([0, 1], [1, 2])) # replace 0 with 1 and 1 with 2
+# print(df.replace({"Pulse": 0}, 1)) # replace 0 in Pulse column with 1
+# print(df.replace({"Pulse": [0, 1]}, {0: 1, 1: 2})) # replace 0 and 1 in Pulse column with 1 and 2 
+## Interpolate : fill missing values with previous or next value 
+num_cols = df.select_dtypes(include='number').columns 
+df[num_cols] = df[num_cols].interpolate(method='linear', limit_direction='both', axis=0)  
+print(df)
