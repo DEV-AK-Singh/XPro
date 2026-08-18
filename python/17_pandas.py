@@ -49,3 +49,19 @@ import pandas as pd
 # print("".center(50, "-"))
 # del df["D"]
 # print(df)
+
+## PANDAS CSV FILES
+# student_A = {"name": "abhishek", "age": 24, "score": 85}
+# student_B = {"name": "bob", "age": 24, "score": 85}
+# student_C = {"name": "charlie", "age": 24, "score": 85}
+# df = pd.DataFrame([student_A, student_B, student_C])
+# df.to_csv("students.csv", index=False)
+
+## READING CSV
+# df = pd.read_csv("data.csv")
+# df = pd.read_csv("data.csv", index_col="Date", nrows=3, usecols=["Pulse", "Calories", "Duration", "Date"], skiprows=[1, 2, 3])
+# df = pd.read_csv("data.csv", header=2, nrows=5)
+# df = pd.read_csv("data.csv", nrows=3, names=["Date-X", "Pulse-X", "Calories-X", "Duration-X"], skiprows=[0])
+# df = pd.read_csv("data.csv", nrows=5, header=None)
+# df = pd.read_csv("data.csv", dtype={"Date": str, "Pulse": float, "Duration": float})
+# print(df)
