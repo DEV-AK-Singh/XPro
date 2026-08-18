@@ -29,13 +29,23 @@ import pandas as pd
 # print(df.iloc[2]) # iloc = integer location
 
 ## ARITHMETIC OPERATIONS
-df = pd.DataFrame({"A": [1,2,3], "B": [4,5,6], "C": [7,8,9]}) 
-print(df)
-print("".center(50, "-"))
-df["SUM"] = df["A"] + df["B"] + df["C"]
-df["SUB"] = df["A"] - df["B"] - df["C"]
-df["MUL"] = df["A"] * df["B"] * df["C"]
-df["DIV"] = df["A"] / df["B"] / df["C"]
-df["AgtB"] = df["A"] > df["B"]
-df["AgtC"] = df["A"] > df["C"]
-print(df)
+# df = pd.DataFrame({"A": [1,2,3], "B": [4,5,6], "C": [7,8,9]}) 
+# print(df)
+# print("".center(50, "-"))
+# df["SUM"] = df["A"] + df["B"] + df["C"]
+# df["SUB"] = df["A"] - df["B"] - df["C"]
+# df["MUL"] = df["A"] * df["B"] * df["C"]
+# df["DIV"] = df["A"] / df["B"] / df["C"]
+# df["AgtB"] = df["A"] > df["B"]
+# df["AgtC"] = df["A"] > df["C"]
+# print(df)
+
+## INSERT & DELETE
+# df = pd.DataFrame({"A": [1,2,3], "B": [4,5,6], "C": [7,8,9]})
+# print(df)
+# print("".center(50, "-"))
+# df.insert(1, "D", [10, 11, 12]) # df["D"] = [10, 11, 12]
+# print(df)
+# print("".center(50, "-"))
+# del df["D"]
+# print(df)
