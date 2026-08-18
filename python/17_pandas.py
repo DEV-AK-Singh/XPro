@@ -104,7 +104,7 @@ import pandas as pd
 # print(df.bfill()) # fill missing values with next value
 
 ## HANDLING MISSING DATA (REPLACE, INTERPOLATE)
-df = pd.read_csv("data.csv")
+# df = pd.read_csv("data.csv")
 # print(df) 
 # print(df.replace(100, 1)) # replace 0 with 1
 # print(df.replace("[A-Za-z0-9]", "1", regex=True))
@@ -112,6 +112,28 @@ df = pd.read_csv("data.csv")
 # print(df.replace({"Pulse": 0}, 1)) # replace 0 in Pulse column with 1
 # print(df.replace({"Pulse": [0, 1]}, {0: 1, 1: 2})) # replace 0 and 1 in Pulse column with 1 and 2 
 ## Interpolate : fill missing values with previous or next value 
-num_cols = df.select_dtypes(include='number').columns 
-df[num_cols] = df[num_cols].interpolate(method='linear', limit_direction='both', axis=0)  
-print(df)
+# num_cols = df.select_dtypes(include='number').columns 
+# df[num_cols] = df[num_cols].interpolate(method='linear', limit_direction='both', axis=0)  
+# print(df)
+
+## MERGE AND CONCAT 
+# df1 = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6], "C": [7, 8, 9]})
+# df2 = pd.DataFrame({"A": [1, 2, 4], "D": [13, 14, 15], "E": [16, 17, 18]})
+# print(df1)
+# print(df2)
+# print(pd.merge(df1, df2, on="A"))
+# print(pd.merge(df1, df2, how="left", on="A"))
+# print(pd.merge(df1, df2, how="right", on="A"))
+# print(pd.merge(df1, df2, how="outer", on="A"))
+# print(pd.merge(df1, df2, how="inner", on="A")) 
+# print(pd.merge(df1, df2, left_index=True, right_index=True, suffixes=("_left", "_right")))
+# df1 = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6], "C": [7, 8, 9]})
+# df2 = pd.DataFrame({"D": [10, 11, 12], "E": [13, 14, 15], "F": [16, 17, 18]})
+# df3 = pd.DataFrame({"G": [19, 20, 21], "H": [22, 23, 24], "I": [25, 26, 27]})
+# print(df1)
+# print(df2)
+# print(df3)
+# print(pd.concat([df1, df2, df3], axis=1))
+# print(pd.concat([df1, df2, df3], axis=0))
+# print(pd.concat([df1, df2, df3], axis=0, keys=["df1", "df2", "df3"]))
+# print(pd.concat([df1, df2, df3], axis=0, keys=["df1", "df2", "df3"], join="inner"))
