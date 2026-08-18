@@ -137,3 +137,16 @@ import pandas as pd
 # print(pd.concat([df1, df2, df3], axis=0))
 # print(pd.concat([df1, df2, df3], axis=0, keys=["df1", "df2", "df3"]))
 # print(pd.concat([df1, df2, df3], axis=0, keys=["df1", "df2", "df3"], join="inner"))
+
+## GROUP BY
+# subjects = ["Maths", "English", "Maths", "English", "Maths", "English", "Maths", "English", "Maths", "English"]
+# scores = [50, 60, 70, 80, 90, 100, 50, 60, 70, 80]
+# df = pd.DataFrame({"Subjects": subjects, "Scores": scores})
+# print(df)
+# print(df.groupby("Subjects").mean())
+# print(df.groupby("Subjects").sum())
+# print(df.groupby("Subjects").count())
+# print(df.groupby("Subjects").agg(["mean", "sum", "count"]))
+# print(df.groupby("Subjects").agg({"Scores": ["mean", "sum", "count"]}))
+
+## JOIN & APPEND
