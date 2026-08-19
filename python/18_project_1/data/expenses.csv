@@ -1,0 +1,11 @@
+date,category,description,amount,payment_method
+2026-01-01,Food,Lunch,250,UPI
+2026-01-02,Transport,Auto,120,Cash
+2026-01-03,Shopping,T-Shirt,899,Card
+2026-01-04,Food,Dinner,450,UPI
+2026-01-05,Bills,Internet,799,UPI
+2026-01-06,Transport,Petrol,200,Card
+2026-01-07,Food,Breakfast,150,Cash
+2026-01-08,Shopping,Shoes,2499,Card
+2026-01-09,Entertainment,Movie,500,UPI
+2026-01-10,Food,Lunch,300,UPI
