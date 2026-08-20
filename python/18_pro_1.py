@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("data/expenses.csv")
+df = pd.read_csv("expenses.csv")
 
 # print(df)
 # print(df.shape)
@@ -34,6 +34,6 @@ df = pd.read_csv("data/expenses.csv")
 # print(np.max(amounts), df["amount"].max())
 # print(np.sum(amounts), df["amount"].sum())
 
-# print(df)
-# print(df.groupby("category").sum()["amount"])
+print(df)
+print(df.groupby("category").sum()["amount"])
 
